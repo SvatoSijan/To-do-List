@@ -1,0 +1,74 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+}
+:root{
+    --bcolor: rgb(245, 186, 186);
+    --aColor: rgb(174, 202, 247);
+    --cColor: #FF9C84;
+    --shadow: rgb(123, 74, 74);
+    background-color: var(--bcolor);
+    /* background: radial-gradient(#ffff0070,var(--bcolor), var(--bcolor)); */
+}
+#newTaskForm {
+    display: grid;
+    width: 90%;
+    height: 90%;
+    border: solid 2px black;
+    grid-template-rows: 4fr 1fr 1fr 1fr 4fr;
+    grid-template-columns: 4fr 1fr 1fr 1fr 4fr;
+    grid-template-areas: 
+        ". . . . ."
+        ". a a a ."
+        ". b b b ."
+        ". c c c ."
+        ". . . . .";
+        background: radial-gradient(#ffff0070,var(--bcolor), var(--bcolor));
+}
+
+#newTaskForm > div:first-child {
+    grid-area: a;
+}
+
+#newTaskForm > div:nth-child(2) {
+    grid-area: b;
+}
+
+#newTaskForm > div:last-child {
+    grid-area: c;
+}
+
+
+#newTaskForm>div>label{
+    grid-area: a;
+    height: 100%;
+    font-size: 1.2rem;
+}
+
+
+#newTaskForm>div{
+    align-content: center;
+    justify-content: center;
+}
+#newTaskForm>div:last-child{
+    display:flex;
+    justify-content: center;
+}
+#newTaskForm>div:last-child>*{
+    height: max-content;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: transparent;
+    box-shadow: 3px 3px rgba(240, 29, 240, 0.673);
+    font-size: 1.01rem;
+}
+#newTaskForm>div:last-child>*:hover{
+    cursor: pointer;
+    font-size: 1.05rem;
+}
+#newTaskForm>div:last-child>*:active{
+    box-shadow: 5px 5px rgba(240, 29, 240, 0.848);
+    font-size: 1.0rem;
+}

@@ -1,0 +1,52 @@
+#taskList{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+#taskList>div:nth-child(odd){
+    background-color: rgba(53, 26, 26, 0.105);
+
+
+}
+#taskList>div{
+    width: 80%;
+    height: fit-content;
+    padding-left: 20%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 11fr;
+    grid-template-areas: 
+    "a b"
+    "a c";
+}
+#taskList>div>*:first-child{
+    grid-area: a;
+    margin-top: 10%;
+    height: 50%;
+    width: 80%;
+    justify-self: right;
+    background-color: rgb(174, 202, 247);
+}
+#taskList>div>*:first-child:hover{
+    cursor: pointer;
+    font-size: .9rem;
+    background-color: rgba(1, 128, 29, 0.36);
+}
+#taskList>div>*:first-child:active{
+    box-shadow: 5px 5px rgb(1, 128, 29);
+    font-size: 1.0rem;
+}
+
+#taskList>div>*:nth-child(2){
+    grid-area: b;
+    font-size: 1.3rem !important;
+    padding-left: 5px;
+}
+#taskList>div>*:nth-child(3){
+    grid-area: c;
+    padding-left: 15px;
+}
+#taskList>div:hover{
+    background-color: rgb(174, 202, 247);
+    font-weight: 600;
+}
